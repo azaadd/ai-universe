@@ -11,9 +11,19 @@
 
 /* modal btn close */
 .my-btn{
-    margin-left: 785px;
-    margin-top: -10px;
+    margin-left: 1125px;
+    margin-top: -11px;
     background-color: #e62929!important;
     color: aliceblue;
 }
 
+/* modal-text-color */
+.modal-text-color1{
+    color: #03A30A;
+}
+.modal-text-color2{
+    color: #F28927;
+}
+.modal-text-color3{
+    color: #EB5757;
+}
