@@ -16,7 +16,9 @@ const displayTools = tools =>{
                 <img src="${tool.image}" class="card-img-top mx-auto rounded sizes" alt="...">
                 <div class="card-body">
                     <h5 class="card-title mb-4">Features</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <span class="card-text">1. ${tool.features[0]}</span><br>
+                    <span class="card-text">2. ${tool.features[1]}</span><br>
+                    <span class="card-text">3. ${tool.features[2]}</span><br>
                 </div>
                 <hr class="mx-3">
                 <div class="d-flex  justify-content-between">
