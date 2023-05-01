@@ -1,13 +1,28 @@
-const loadAiTools = async() => {
+const loadAiTools = async(dataLimit) => {
     const url = `https://openapi.programming-hero.com/api/ai/tools`
     const res = await fetch(url);
     const data = await res.json();
-    displayTools(data.data.tools);
+    displayTools(data.data.tools, dataLimit);
 }
 
-const displayTools = tools =>{
-    console.log(tools);
+const displayTools = (tools, dataLimit) =>{
     const toolsContainer = document.getElementById('tool-container');
+
+    toolsContainer.innerHTML = '';
+
+    // start spinner loader...
+    toggleSpinner(true);
+
+    // display 6 Ai card tools only. 
+    const showAll = document.getElementById('show-all');
+    if(dataLimit && tools.length > 6){
+        tools = tools.slice(0, 6);
+        showAll.classList.remove('d-none');
+    }
+    else{
+        showAll.classList.add('d-none');
+    }
+
     tools.forEach(tool => {
         const toolDiv = document.createElement('div');
         toolDiv.classList.add('col');
@@ -35,7 +50,26 @@ const displayTools = tools =>{
         `;
         toolsContainer.appendChild(toolDiv);
     });
+
+    // stop spinner loader...
+    toggleSpinner(false);
 }
 
 
-loadAiTools();
+const toggleSpinner = isLoading =>{
+    const loaderSection = document.getElementById('loader');
+    if(isLoading){
+        loaderSection.classList.remove('d-none');
+    }
+    else{
+        loaderSection.classList.add('d-none');
+    }
+}
+
+document.getElementById('btn-show-all').addEventListener('click', function(){
+    toggleSpinner(true);
+    loadAiTools();
+})
+
+
+loadAiTools(6);
