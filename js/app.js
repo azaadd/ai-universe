@@ -26,7 +26,7 @@ const displayTools = tools =>{
                         <h5 class="list-group-item mb-3 ms-3">${tool.name}</h5>
                         <div class="ms-3">
                             <i class="fa-regular fa-calendar"></i>
-                            <span class="ms-2">11/01/2022</span>
+                            <span class="ms-2">${tool.published_in}</span>
                         </div>
                     </div>
                     <button class="btn btn-light rounded-4 me-3 h-25 mt-3"><i class="fa-solid red fa-arrow-right"></i></button>
