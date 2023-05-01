@@ -21,7 +21,7 @@ const displayTools = tools =>{
                 <hr class="mx-3">
                 <div class="d-flex  justify-content-between">
                     <div>
-                        <h5 class="list-group-item mb-3 ms-3">ChatGPT</h5>
+                        <h5 class="list-group-item mb-3 ms-3">${tool.name}</h5>
                         <div class="ms-3">
                             <i class="fa-regular fa-calendar"></i>
                             <span class="ms-2">11/01/2022</span>
