@@ -1,8 +1,19 @@
+/* card detail btn */
 .fa-solid.red{
     color: #EB5757;
 }
 
+/* Ai card image size */
 .sizes{
     width: 200px;
     height: 190px;
 }
+
+/* modal btn close */
+.my-btn{
+    margin-left: 785px;
+    margin-top: -10px;
+    background-color: #e62929!important;
+    color: aliceblue;
+}
+

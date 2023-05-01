@@ -44,7 +44,8 @@ const displayTools = (tools, dataLimit) =>{
                             <span class="ms-2">${tool.published_in}</span>
                         </div>
                     </div>
-                    <button class="btn btn-light rounded-4 me-3 h-25 mt-3"><i class="fa-solid red fa-arrow-right"></i></button>
+                    <button onclick="loadAiToolDetails(${tool.id})" class="btn btn-light rounded-4 me-3 h-25 mt-3" data-bs-toggle="modal" data-bs-target="#toolDetailModal"><i class="fa-solid red fa-arrow-right"></i></button>
+                    
                 </div>
             </div>
         `;
@@ -71,5 +72,12 @@ document.getElementById('btn-show-all').addEventListener('click', function(){
     loadAiTools();
 })
 
+
+const loadAiToolDetails = async id =>{
+    const url = `https://openapi.programming-hero.com/api/ai/tools`;
+    const res = await fetch(url);
+    const data = await res.json();
+    console.log(data.data.tools);
+}
 
 loadAiTools(6);
