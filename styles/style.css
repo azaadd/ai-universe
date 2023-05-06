@@ -5,7 +5,7 @@
 
 /* Ai card image size */
 .sizes{
-    width: 200px;
+    width: 300px;
     height: 190px;
 }
 
@@ -26,4 +26,21 @@
 }
 .modal-text-color3{
     color: #EB5757;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 896px){
+    .modal-margin-sm{
+        margin: auto!important;
+    }
+    .my-btn{
+        margin-left: auto;
+        margin-top: auto;
+    }
+    .sizes{
+        width: 90%;
+        height: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
 }
