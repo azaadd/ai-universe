@@ -84,10 +84,32 @@ const loadAiToolDetails = async (id)=>{
 
 const displayToolDetail = (tool) =>{
 
-    
+    // modal card description
         const modalCardDescription = document.getElementById('card-description');
         modalCardDescription.innerText = `${tool.description ? tool.description : "No description found"}`;
-                        
+
+    // modal card price
+        const modalCardPricing1 = document.getElementById('modal-card-price1');
+        modalCardPricing1.innerText = `${tool.pricing ? tool.pricing[0].price : "Free of Cost/"}`; 
+
+        const modalCardPricing2 = document.getElementById('modal-card-price2');
+        modalCardPricing2.innerText = `${tool.pricing ? tool.pricing[1].price : "Free of Cost/"}`; 
+
+        const modalCardPricing3 = document.getElementById('modal-card-price3');
+        modalCardPricing3.innerText = `${tool.pricing ? tool.pricing[2].price : "Free of Cost"}`; 
+
+        // modal card plan
+        const modalCardPlaning1 = document.getElementById('modal-card-plan1');
+        modalCardPlaning1.innerText = `${tool.pricing ? tool.pricing[0].plan : "Basic"}`; 
+
+        const modalCardPlaning2 = document.getElementById('modal-card-plan2');
+        modalCardPlaning2.innerText = `${tool.pricing ? tool.pricing[1].plan : "Pro"}`; 
+
+        const modalCardPlaning3 = document.getElementById('modal-card-plan3');
+        modalCardPlaning3.innerText = `${tool.pricing ? tool.pricing[2].plan : "Enterprise"}`; 
+
+    
+
 }
 
 loadAiTools(6);
