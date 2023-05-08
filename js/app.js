@@ -108,7 +108,28 @@ const displayToolDetail = (tool) =>{
         const modalCardPlaning3 = document.getElementById('modal-card-plan3');
         modalCardPlaning3.innerText = `${tool.pricing ? tool.pricing[2].plan : "Enterprise"}`; 
 
+        // modal features
+        const modalFeatures1 = document.getElementById('model-feature1');
+        modalFeatures1.innerText = `${tool.features ? tool.features[1].feature_name : "No data found"}`;
+
+        const modalFeatures2 = document.getElementById('model-feature2');
+        modalFeatures2.innerText = `${tool.features ? tool.features[2].feature_name : "No data found"}`;
+
+        const modalFeatures3 = document.getElementById('model-feature3');
+        modalFeatures3.innerText = `${tool.features ? tool.features[3].feature_name : "No data found"}`;
+
+        // modal integration
+        const modalIntegration1 = document.getElementById('model-integration1');
+        modalIntegration1.innerText = `${tool.integrations ? tool.integrations[0] : "No data found"}`;
+
+        const modalIntegration2 = document.getElementById('model-integration2');
+        modalIntegration2.innerText = `${tool.integrations ? tool.integrations[1] : "No data found"}`;
+
+        const modalIntegration3 = document.getElementById('model-integration3');
+        modalIntegration3.innerText = `${tool.integrations ? tool.integrations[2] : "No data found"}`;
     
+        // modal image
+        
 
 }
 
