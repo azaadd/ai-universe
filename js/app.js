@@ -129,7 +129,8 @@ const displayToolDetail = (tool) =>{
         modalIntegration3.innerText = `${tool.integrations ? tool.integrations[2] : "No data found"}`;
     
         // modal image
-        
+        const modalImage = document.getElementById('modal-img');
+        modalImage.innerText = `${tool.image_link}`;
 
 }
 

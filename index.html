@@ -51,14 +51,14 @@
         <!-- modal section -->
         <section class="container">       
             <div id="ai-modal-container">
-                <div class="modal fade" id="toolDetailModal"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="toolDetailModalLabel" aria-hidden="true">
+                <div class="modal fade" id="toolDetailModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="toolDetailModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-xl">
                         <div class="modal-content">
                             
                             <button type="button" class="btn my-btn btn-close btn-danger rounded-5" data-bs-dismiss="modal" aria-label="Close"></button>
-                            <div class="row g-4 mb-5 mt-4 mx-5 modal-margin-sm">
+                            <div class="row row-cols-1 row-cols-md-2 g-4 mb-5 mt-3 mx-4 modal-margin-sm">
                                 <div class="col">
-                                    <div class="card h-100 w-auto bg-danger bg-opacity-10 p-5">
+                                    <div class="card h-100 bg-danger bg-opacity-10 p-4">
                                         <h5 id="card-description" class="modal-title fs-5 lh-sm fw-bold mb-4"></h5>
 
                                         <div class="justify-content-center mt-4 d-md-flex">
@@ -100,10 +100,14 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div class="card h-100 w-auto p-5">
-                                        <img id="modal-img" src="" class="card-img-top" alt="">
-                                        <h5 class="fw-bold">Hi, how are you doing today?</h5>
-                                        <p class="">I'm doing well, thank you for asking. How can I assist you today?</p>
+                                    <div class="card h-100 p-4">
+                                        
+                                        <img id="modal-img" src="https://www.datanami.com/wp-content/uploads/2023/01/chat_gpt_shutterstock_Ebru-Omer.jpg" class="card-img-top rounded modal-img" alt="">
+
+                                        <span id="" class="text-white bg-danger modal-accuracy text-center">94% accuracy</span>
+                                        
+                                        <h5 class="fw-bold modal-greeting text-center mb-3">Hi, how are you doing today?</h5>
+                                        <p class="text-center">I'm doing well, thank you for asking. How can I assist you today?</p>
                                         
                                     </div>
                                 </div>
