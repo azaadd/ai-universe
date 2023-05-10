@@ -130,7 +130,14 @@ const displayToolDetail = (tool) =>{
     
         // modal image
         const modalImage = document.getElementById('modal-img');
-        modalImage.innerText = `${tool.image_link}`;
+        modalImage.setAttribute("src", `${tool.image_link[0]}`);
+
+        // modal greeting 
+        const modalGreeting = document.getElementById('modal-greeting');
+        modalGreeting.innerText = `${tool.input_output_examples[1].input}`;
+
+        const modalGreetingOutput = document.getElementById('modal-greeting-output');
+        modalGreetingOutput.innerText = `${tool.input_output_examples[1].output}`;
 
 }
 

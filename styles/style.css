@@ -29,6 +29,10 @@
     color: #EB5757;
 }
 
+.modal-img{
+    width: 471px;
+    height: 265px;
+}
 .modal-accuracy{
     width: 135px;
     height: 35px;
@@ -37,10 +41,11 @@
     text-align: center;
     margin-top: -257px;
     margin-left: auto;
+    margin-right: 5px;
 }
 
 .modal-greeting{
-    margin-top: auto;
+    margin-top: 55%;
 }
 
 @media only screen and (min-width: 375px) and (max-width: 896px){
