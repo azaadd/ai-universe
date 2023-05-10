@@ -34,19 +34,20 @@
     height: 265px;
 }
 .modal-accuracy{
-    width: 135px;
-    height: 35px;
-    font-size: 20px;
+    width: 160px;
+    height: auto;
+    font-size: 18px;
     border-radius: 7px;
     text-align: center;
-    margin-top: -257px;
+    margin-top: -55%;
     margin-left: auto;
     margin-right: 5px;
 }
 
 .modal-greeting{
-    margin-top: 55%;
+    margin-top: 53%;
 }
+
 
 @media only screen and (min-width: 375px) and (max-width: 896px){
     .modal-margin-sm{
@@ -71,9 +72,9 @@
     }
 
     .modal-accuracy{
-        width: 130px;
+        width: 140px;
         height: auto;
-        font-size: 16px;
+        font-size: 14px;
         border-radius: 5px;
         text-align: center;
         margin-top: -55%;
@@ -82,7 +83,7 @@
     }
 
     .modal-greeting{
-        margin-top: 55%;
+        margin-top: 53%;
     }
 
 }

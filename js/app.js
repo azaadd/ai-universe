@@ -57,6 +57,10 @@ const displayCards = (cards, dataLimit) =>{
     toggleSpinner(false);
 };
 
+document.getElementById('btn-show-all').addEventListener('click', function(){
+    toggleSpinner(true);
+    loadAiTools();
+});
 
 const toggleSpinner = isLoading =>{
     const loaderSection = document.getElementById('loader');
@@ -67,11 +71,6 @@ const toggleSpinner = isLoading =>{
         loaderSection.classList.add('d-none');
     }
 }
-
-document.getElementById('btn-show-all').addEventListener('click', function(){
-    toggleSpinner(true);
-    loadAiTools();
-})
 
 
 const loadAiToolDetails = async (id)=>{
@@ -121,12 +120,23 @@ const displayToolDetail = (tool) =>{
         // modal integration
         const modalIntegration1 = document.getElementById('model-integration1');
         modalIntegration1.innerText = `${tool.integrations ? tool.integrations[0] : "No data found"}`;
+        if(modalIntegration1.innerText == "" || "undefined"){
+            modalIntegration1.style.listStyle = "none";
+        }
+
 
         const modalIntegration2 = document.getElementById('model-integration2');
-        modalIntegration2.innerText = `${tool.integrations ? tool.integrations[1] : "No data found"}`;
+        modalIntegration2.innerText = `${tool.integrations ? tool.integrations[1] : ""}`;
+        if(modalIntegration2.innerText == "" || "undefined"){
+            modalIntegration2.style.display = "none";
+        }
 
         const modalIntegration3 = document.getElementById('model-integration3');
-        modalIntegration3.innerText = `${tool.integrations ? tool.integrations[2] : "No data found"}`;
+        modalIntegration3.innerText = `${tool.integrations ? tool.integrations[2] : ""}`;
+        if(modalIntegration3.innerText == "" || "undefined"){
+            modalIntegration3.style.display = "none";
+        }
+
     
         // modal image
         const modalImage = document.getElementById('modal-img');
@@ -134,10 +144,23 @@ const displayToolDetail = (tool) =>{
 
         // modal greeting 
         const modalGreeting = document.getElementById('modal-greeting');
-        modalGreeting.innerText = `${tool.input_output_examples[1].input}`;
+        modalGreeting.innerText = `${tool.input_output_examples ? tool.input_output_examples[1].input : "No data found"}`;
 
         const modalGreetingOutput = document.getElementById('modal-greeting-output');
-        modalGreetingOutput.innerText = `${tool.input_output_examples[1].output}`;
+        modalGreetingOutput.innerText = `${tool.input_output_examples ? tool.input_output_examples[1].output : "No! Not Yet! Take a break!!!"}`;
+
+         // modal accuracy
+         const modalAccuracyBody = document.getElementById('modal-accuracy-body');
+         const modalAccuracy = document.getElementById('modal-accuracy-percent');
+         modalAccuracy.innerText = `${tool.accuracy ? tool.accuracy.score*100 : "0"}`;
+         if(modalAccuracy.innerText == "0"){
+            modalAccuracyBody.style.display = "none";
+         }
+         else{
+            modalAccuracyBody.style.display = "block";
+         }
+ 
+
 
 }
 
